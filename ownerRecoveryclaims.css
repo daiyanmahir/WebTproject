@@ -1,0 +1,42 @@
+
+
+#btn2.active{
+    background-color: #1D4D3F;
+    color: white;
+}
+
+
+
+.claim-details{
+    display: flex;
+    gap:40px;
+    padding: 20px;
+}
+.report-section button{
+   background-color:  transparent;
+    color: rgb(2, 13, 4);
+    border: 1px solid #d8d2c6;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin:5px;
+}
+
+#btn1, #btn2{
+    float: right;
+    transition-duration: 0.4s;
+
+}
+
+
+#btn1:hover, #btn:hover{
+    background-color: #286653;
+    color:white;
+
+}
+
+#btn2:hover{
+    background-color: #7e1e1e;
+    color:white;
+}

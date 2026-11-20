@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<head>
+    <title>My Lost Reports- BackToYou</title>
+  <link rel="stylesheet" href="ownerDashboard.css">
+    <link rel="stylesheet" href="ownerLostreport.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="ownerSaveditems.css">
+   
+   
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="head">
+    <div id="lefthead">
+        <h1 id="header"> BackToYou</h1>
+        <br>
+        <h5 id="subhead">LOST & FOUND BANGLADESH</h5>
+     </div>
+
+        <div id="centerhead">
+        <h6 > THE COMMUNITY NOTICE BOARD BANGLADESH</h6>
+        </div>
+
+        <div id="righthead">
+           <a href="register.html">Sign in/Join</a>
+
+        </div>
+</div>
+
+<!-- MAIN -->
+    <div class="workspace">
+
+      <aside class="sidebar">
+       <div id="button">
+    <a href="ownerDashboard.html">
+      <button id="btn1" > Dashboard</button><br></a>
+       <a href="ownerLostreport.html">
+      <button id="btn2" class="active"> Lost Report</button><br></a>
+      <a href="ownerSavedFoundItems.html">
+      <button id="btn3"> Saved Found Items</button><br></a>
+      <a href="ownerRecoveryclaims.html">
+      <button id="btn4"> Recovery CLaims</button> <br> </a>
+      <a href="register.html">
+      <button id="btn5"> Log Out</button></a>
+      <br>
+      <hr>
+
+    </div>
+
+    <div id="sidenote">
+        <p id="note1">
+          Lost something. <br>
+          Found a little <br>
+          hope.
+        </p>
+        <p id="note2">
+            A community service built on
+            <br>
+            care,
+            honesty and safe returns.
+        </p>
+        <hr>
+    </div>
+    </aside>
+
+    <main class="content">
+        <div class="content-heading">
+             <h1 >My lost reports</h1><br>
+             <p >Your noticeboard,keep descriptions useful...</p>
+             <button onclick="savedReport()">View Reports</button>
+        </div>
+
+       <div class="content-box">
+            <div class="left-content">
+              
+             <div class="content1">
+                <h2>Create lost report</h2>
+          
+                 <form onsubmit="createForm(event)"   id="createreport" novalidate >
+                    
+
+                 <div class="field">
+              
+                 <label for="item">Item Name*</label>
+                 
+                 <input type="text" id="item" name="item" placeholder="Enter your lost item name" required minlength="3">
+                  </div>
+
+                <div class="field">
+
+                <label for="desc">Detailed Description*</label>
+                <textarea rows="2" cols="30" id="desc" name="desc" required></textarea>
+                </div>
+            
+                <div class="field">
+                <label for="category">Category*</label>
+          
+                <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="documents">Documents</option>
+                <option value="jewellery">Jewellery</option>
+                 <option value="bag">Bag</option>
+                 <option value="books">Books</option>
+                 <option value="others">Other</option>
+                </select>
+                </div>
+            
+                <div class="field">
+               <label for="img">Upload Image</label>
+               <input type="file" id="img" name="img" accept="image/*">
+               </div>
+
+            </div>
+           
+
+             <div class="content2">
+   
+                 
+                 <div class="field">
+                 <label for="division">Division*</label>
+                 <select id="division" required>
+                <option value="">Select Division</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chittagong">Chittagong</option>
+                <option value="khulna">Khulna</option>
+                <option value="rajshahi">Rajshahi</option>
+                <option value="barishal">Barishal</option>
+                <option value="sylhet">Sylhet</option>
+                <option value="rangpur">Rangpur</option>
+                </select>
+                </div>
+
+                <div class="field">
+
+                <label for="loc">Approximate Location*</label>
+                <textarea rows="2" cols="30" id="loc" name="loc" required></textarea>
+                </div>
+
+                <div class="field">
+                <label for="date">Date Lost*</label>
+                <input type="date" id="date" name="date"><br>
+                </div>
+                <br>
+                
+
+             <p id="formError" class="form-error">
+             </p>
+
+                  <div class="form-actions">
+            <button type="submit">Save Report</button>
+            <button type="reset" onclick="clearError()">Clear</button>
+        </div>
+            
+             </div>  
+             
+         </form>
+         
+            </div>
+    
+        
+
+        <div class="right-content">
+
+     <h2>Before you submit</h2>
+
+    <p>A few things to remember when
+    creating your lost item report.</p><hr>
+
+    <h3> Provide clear descriptions</h3>
+    <p>Mention the item's color, brand and
+    unique identifying features.</p><hr>
+
+    <h3> Specify the location</h3>
+    <p>Include nearby landmarks or places
+    where you last saw your item.</p><hr>
+
+    <h3> Upload a useful photo</h3>
+    <p>A clear image can help others
+    recognize your belongings.</p><hr>
+
+    <h3> Protect your privacy</h3>
+    <p>Avoid sharing sensitive personal
+    information publicly.</p>
+
+    </div>
+ </div>
+ <br><br>
+       <div class="report-section" id="reportSection" style="display: none;">
+         <div class="report-layout">
+
+          <div class="report-left" id="report-left">
+        <h2>My Reports</h2>
+        <p>View and manage your previously submitted lost item reports.</p><br>
+       
+      
+      <!-- Search and filters -->
+        <div class="report-filters">
+               <form >
+        <input type="search"  placeholder="🔍Search for a bag, wallet, phone...">
+
+
+        <select id="category">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="documents">Documents</option>
+            <option value="jewellery">Jewellery</option>
+            <option value="bag">Bag</option>
+            <option value="books">Books</option>
+            <option value="others">Other</option>
+                
+        </select>
+        
+
+        <select>
+            <option>All Status</option>
+            <option>Searching</option>
+            <option>Recovered</option>
+        </select>
+
+         <button type="submit">Search</button>
+         </form>
+    </div>
+
+    <!-- Reports table -->
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Date Lost</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+ <tbody id="lostReportTable">
+        <tr>
+            <td>Black Backpack</td>
+            <td>17 Oct 2026</td>
+            <td>Dhaka</td>
+            <td>Searching</td>
+            <td>
+                <button type="button" onclick="viewReport()">View</button>
+                <button type="button" onclick="markRecovered()">Mark Recovered</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+          </div>
+
+           <div class="report-right" id="report-right">
+
+            
+            <h2>Submitted Report</h2>
+            <p>Edit or Delete report</p>
+            <br>
+
+             <div class="field">
+              
+                 <label for="item">Item Name</label>
+                 <input type="text" id="item" name="item"  required minlength="3">
+                  </div>
+
+                <div class="field">
+
+                <label for="desc">Detailed Description</label>
+                <textarea rows="3" cols="30" id="desc" name="desc" required></textarea>
+                </div>
+            
+                <div class="field">
+                <label for="category">Category</label>
+          
+                <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="documents">Documents</option>
+                <option value="jewellery">Jewellery</option>
+                 <option value="bag">Bag</option>
+                 <option value="books">Books</option>
+                 <option value="others">Other</option>
+                </select>
+                </div>
+            
+                <div class="field">
+               <label for="img">Upload Image</label>
+               <input type="file" id="img" name="img" accept="image/*">
+               </div>
+
+               <div class="field">
+                 <label for="division">Division</label>
+                 <select id="division" required>
+                <option value="">Select Division</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chittagong">Chittagong</option>
+                <option value="khulna">Khulna</option>
+                <option value="rajshahi">Rajshahi</option>
+                <option value="barishal">Barishal</option>
+                <option value="sylhet">Sylhet</option>
+                <option value="rangpur">Rangpur</option>
+                </select>
+                </div>
+
+                <div class="field">
+
+                <label for="loc">Approximate Location</label>
+                <textarea rows="4" cols="30" id="loc" name="loc" required></textarea>
+                </div>
+
+                <div class="field">
+                <label for="date">Date Lost</label>
+                <input type="date" id="date" name="date"><br>
+                </div>
+                <br>
+
+                
+                
+
+            </div>
+           
+         </div>
+
+
+
+
+
+       </div>
+
+
+
+
+
+
+    </main>
+
+</div>
+
+
+
+
+
+
+<div id="foot">
+    <p>2026 BackToYou. A little care bring things home</p>
+  </div>
+
+  
+
+
+ <script src="ownerLostReport.js"></script>
+</body>

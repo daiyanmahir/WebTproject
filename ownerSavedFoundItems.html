@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <title>Saved Found Items- BackToYou</title>
+    <link rel="stylesheet" href="ownerDashboard.css">
+    <link rel="stylesheet" href="ownerLostreport.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="ownerSaveditems.css">
+   
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="head">
+    <div id="lefthead">
+        <h1 id="header"> BackToYou</h1>
+        <br>
+        <h5 id="subhead">LOST & FOUND BANGLADESH</h5>
+     </div>
+
+        <div id="centerhead">
+        <h6 > THE COMMUNITY NOTICE BOARD BANGLADESH</h6>
+        </div>
+
+        <div id="righthead">
+           <a href="register.html">Sign in/Join</a>
+
+        </div>
+</div>
+
+<!-- MAIN -->
+    <div class="workspace">
+
+      <aside class="sidebar">
+       <div id="button">
+    <a href="ownerDashboard.html">
+      <button id="btn1" > Dashboard</button><br></a>
+       <a href="ownerLostreport.html">
+      <button id="btn2" > Lost Report</button><br></a>
+      <a href="ownerSavedFoundItems.html">
+      <button id="btn3"> Saved Found Items</button><br></a>
+      <a href="ownerRecoveryclaims.html">
+      <button id="btn4" class="active">Recovery CLaims</button> <br> </a>
+      <a href="register.html">
+      <button id="btn5"> Log Out</button></a>
+      <br>
+      <hr>
+
+    </div>
+
+    <div id="sidenote">
+        <p id="note1">
+          Lost something. <br>
+          Found a little <br>
+          hope.
+        </p>
+        <p id="note2">
+            A community service built on
+            <br>
+            care,
+            honesty and safe returns.
+        </p>
+        <hr>
+    </div>
+    </aside>
+
+    <main class="content">
+        <div class="content-heading">
+             <h1 >Worth a second look</h1><br>
+             <p >Your saved found items in one place...</p>
+             <!-- <button onclick="savedReport()">View Reports</button> -->
+
+             
+        </div>
+       
+             <div id="searchbar" class="searchbar">
+             <form >
+             <input type="text" placeholder="🔍Search for a bag, wallet, phone...">
+
+            <select id="category">
+                <option value="">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="documents">Documents</option>
+                <option value="jewellery">Jewellery</option>
+                 <option value="bag">Bag</option>
+                 <option value="books">Books</option>
+                 <option value="others">Other</option>
+            </select>
+                
+
+            <select id="division" required>
+                <option value="">Select Division</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chittagong">Chittagong</option>
+                <option value="khulna">Khulna</option>
+                <option value="rajshahi">Rajshahi</option>
+                <option value="barishal">Barishal</option>
+                <option value="sylhet">Sylhet</option>
+                <option value="rangpur">Rangpur</option>
+            </select>
+            
+
+            <button type="submit">Search</button>
+        </form>
+     </div>
+<br>
+ <div class="content-box">
+      <div class="leftpanel">
+        <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p>
+            <p>Category: Others</p>
+            <p>Location: Dhaka</p>
+
+      </div>
+
+       <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p>
+            <p>Category:Others</p>
+            <p>Location: Dhaka</p>
+
+      </div>
+       <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p>
+            <p>Category: Others</p>
+            <p>Location: Dhaka</p>
+
+      </div>
+
+        <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p>
+            <p>Category: Others</p>
+            <p>Location: Dhaka</p>
+
+      </div>
+      </div>
+
+    <div class="rightpanel">
+     <div class="note" id="note">
+        <h3>Create or Edit note</h3>
+        <p>Personal to you</p><br>
+        <hr><br>
+        <form>
+        <div class="field">
+        <label for ="noteInput">Your Note:</label><br>
+        <textarea id="noteInput" rows="2" cols="30"></textarea><br>
+        </div>
+        </form>
+        
+        <div class="form-actions">
+            <button type="submit">Save Note</button>
+            <button type="reset" onclick="clearNote()">Clear</button>
+        </div>
+     </div>
+   <div class="note" id="note2">
+     <h3>Before you claim</h3>
+        <p>Compare the item, date and general location.Describe details that only the owner is likely toknow.</p><br>
+        <hr><br>
+   </div>
+ </div>
+
+</div>
+
+</main>
+
+</div>
+<div id="foot">
+    <p>2026 BackToYou. A little care bring things home</p>
+  </div>
+
+  
+
+
+ <script src="ownerSaveditems.js"></script>
+</body>
+</html>
+       
