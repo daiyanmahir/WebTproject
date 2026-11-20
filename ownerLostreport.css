@@ -1,0 +1,307 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+body{
+   background-color: #f4efe6;
+   display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+}
+
+#btn2.active{
+    background-color: #1D4D3F;
+    color: white;
+}
+
+
+.workspace {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+}
+
+.sidebar {
+    /* We'll design this later */
+   height: 1000px;
+    background-color: #f3efe6;
+    border-right: 1px solid #d8d2c6;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content-heading{
+     border-bottom: 2px solid #222;
+     padding-bottom: 12px;
+     margin-bottom: 14px;
+     
+     
+}
+
+.content-heading p{
+    font-size: small;
+    font-family: 'Segoe UI', Consolas, 'Courier New', monospace;
+    display: inline-block;
+}
+.content-heading button{
+    background-color: #286653;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+ 
+    float: right;
+    margin-top: -20px;
+   
+}
+
+
+
+/* Two cards side by side */
+
+.content-box {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    
+   
+}
+
+/* First card - Create report */
+
+.left-content {
+    width: 70%;
+    background-color: #fffbf4;
+    border: 1px solid #d8d2c6;
+    padding: 30px;
+    height: 520px;
+    display: flex;
+    
+}
+
+
+/* Heading */
+
+
+  
+    .left-content h2 {
+    grid-column: 1 / -1;
+     margin-bottom: 25px;
+}
+
+
+/* Two columns inside the form */
+
+.left-content {
+    display: flex;
+    gap: 20px;
+}
+.content2{
+    margin-top: 55px;
+}
+
+.content1,
+.content2 {
+    width: 70%;
+}
+
+
+/* Form fields */
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.form-actions button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     transition-duration: 0.4s;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #286653;
+    color: white;
+}
+
+.form-actions button[type="reset"] {
+    background-color: #eee8dd;
+    color: #333;
+    border: 1px solid #d8d2c6;
+}
+
+.form-actions button:hover {
+    opacity: 0.8;
+}
+
+
+.form-error {
+    color: #a33d32;
+    background-color: #f8e8e3;
+    border-left: 3px solid #a33d32;
+    padding: 5px;
+    display: none;
+    
+}
+
+
+.right-content {
+    width: 30%;
+    background-color: #fffbf4;
+    border: 1px solid #d8d2c6;
+    padding: 25px; 
+    height: 520px;
+   
+}
+
+.right-content h2 {
+    margin-bottom: 15px;
+    
+}
+
+.right-content h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+     color: #286653;
+    
+}
+
+.right-content p {
+   margin-bottom: 8px;
+    font-size: 14px;
+   
+
+}
+
+.report-section {
+    width: 100%;
+    background-color: #fffbf4;
+    border: 1px solid #d8d2c6;
+    padding: 30px;
+     display: none;
+    scroll-margin-top: 20px;
+    
+}
+
+    
+.report-section h2 {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+
+.report-filters  input {
+
+    background-color: #fafaf4;
+    color: rgb(5, 4, 4);
+    border: 1px solid #bbbbb2;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 550px;
+ 
+
+}
+
+
+.report-filters button {
+    background-color: #286653;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+
+.report-filters button:hover {
+    background-color: #40a075;
+}
+
+.report-filters select {
+    background-color: #fafaf4;
+    color: rgb(5, 4, 4);
+    border: 1px solid #bbbbb2;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+   
+    margin-top: 5px;
+}
+
+
+
+table button {
+   background-color: #286653;
+   color: white;
+    border: none;
+    padding: 3px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d8d2c6;
+}
+
+.report-layout {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.report-left {
+    flex: 2.2;
+    min-width: 0;
+}
+
+.report-right {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    background-color: #fffaf2;
+    border: 1px solid #ddd5c8;
+    display: none;
+}

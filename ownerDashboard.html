@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+    <title>Owner Dashboard- BackToYou</title>
+     <link rel="stylesheet" href="ownerDashboard.css">
+    <link rel="stylesheet" href="ownerLostreport.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="ownerSaveditems.css">
+   
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="head">
+    <div id="lefthead">
+        <h1 id="header"> BackToYou</h1>
+        <br>
+        <h5 id="subhead">LOST & FOUND BANGLADESH</h5>
+     </div>
+
+        <div id="centerhead">
+        <h6 > THE COMMUNITY NOTICE BOARD BANGLADESH</h6>
+        </div>
+
+        <div id="righthead">
+           <a href="register.html">Sign in/Join</a>
+
+        </div>
+</div>
+
+<!-- MAIN -->
+    <div class="workspace">
+
+    <aside class="sidebar">
+       <div id="button">
+    <a href="ownerDashboard.html">
+      <button id="btn1" class="active"> Dashboard</button><br></a>
+       <a href="ownerLostreport.html">
+      <button id="btn2" > Lost Report</button><br></a>
+      <a href="ownerSavedFoundItems.html">
+      <button id="btn3"> Saved Found Items</button><br></a>
+      <a href="ownerRecoveryclaims.html">
+      <button id="btn4"> Recovery CLaims</button> <br> </a>
+      <a href="register.html">
+      <button id="btn5"> Log Out</button></a>
+      <br>
+      <hr>
+
+    </div>
+
+    <div id="sidenote">
+        <p id="note1">
+          Lost something. <br>
+          Found a little <br>
+          hope.
+        </p>
+        <p id="note2">
+            A community service built on
+            <br>
+            care,
+            honesty and safe returns.
+        </p>
+        <hr>
+    </div>
+    </aside>
+
+    <main class="content">
+        <div class="content-heading">
+             <h1 >Let’s bring it back to you.</h1><br>
+             <p >Welcome back,user. Keep track of your reports, saved items and recovery claims.</p>
+             <a href="ownerLostReport.html">
+             <button onclick="">Create Report</button></a>
+        </div>
+
+        <div class="content-board">
+            <div class="content-card">
+            <p>Active lost reports</p><BR>
+            <span class="sp">2</span><br><br>
+            <p>Your belongings on the nticeboard</p>
+            </div>
+
+              <div class="content-card">
+            <p>Saved Found Items</p><BR>
+            <span class="sp">3</span><br><br>
+            <p>Items you are keeping an eye on</p>
+            </div>
+
+              <div class="content-card">
+            <p>Pending claims</p><BR>
+            <span class="sp">4</span><br><br>
+            <p>Awaiting a finder's review</p>
+            </div>
+
+              <div class="content-card">
+            <p>Recovered items</p><BR>
+            <span class="sp">2</span><br><br>
+            <p>Safely back where they belong</p>
+            </div>
+        </div><br>
+
+        <div class="content-box">
+
+         <!-- <div class="report-section" id="reportSection"> -->
+         <div class="dashboard-left">
+
+          <div class="dash-left" id="dashleft">
+         <h3>My Recent Reports</h3><br>
+       
+
+    <!-- Reports table -->
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Date Lost</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+ <tbody id="lostReportTable">
+        <tr>
+            <td>Black Backpack</td>
+            <td>17 Oct 2026</td>
+            <td>Dhaka</td>
+            <td>Searching</td>
+            <td>
+                 <a href="ownerLostReport.html">
+                <button onclick="savedReport()">View</button>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Leather Wallet</td>
+            <td>18 Oct 2026</td>
+            <td>Dhaka</td>
+            <td>Searching</td>
+            <td>
+                <a href="ownerLostReport.html">
+                <button onclick="savedReport()">View</button></a>
+               
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div><br>
+
+<div class="middle">
+ <h3>New on the found noticeboard</h3>
+ <a href="ownerSavedFoundItems.html">
+ <button type="button"id="midbtn" onclick="">View Saved Items</button></a>
+ </div>
+
+<div class="leftpanel">
+  <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p><br><br>
+            
+            <button type="button" id="btn" onclick="">Save</button>
+          
+
+      </div>
+
+       <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p><br><br>
+            <button type="button" id="btn" onclick="">Save</button>
+            
+
+      </div>
+       <div class="itemcard">
+            <img src="" alt="Item Image">
+            <h3>Lost Wallet</h3>
+            <p>Black leather wallet lost near Dhanmondi.</p><br><br>
+            <button type="button"id="btn" onclick="">Save</button>
+       </div>
+
+      </div>
+</div>
+
+ <div class="dashboard-right">
+    <div class="dash-right">
+        <h3>My recovery claims</h3>
+          
+        <div class="claim-update">
+         <h4>Black backpack</h4>
+        
+         <p class="claim-user">Finder: Tanvir Ahmed (dummy infos)</p>
+         <span class="claim-status pending">Pending</span>
+         <p>Submitted 20 Oct. Your identifying details are waiting for review.</p>
+
+    </div>
+
+    <hr>
+
+  
+    <div class="claim-update">
+
+        <h4>University books</h4>
+
+        <p class="claim-user"> Finder: Nusrat Jahan</p>
+
+        <span class="claim-status approved">Approved</span>
+
+        <p>Your claim has been approved! The finder is ready to arrange a safe handover.</p>
+
+    </div>
+
+    <hr>
+
+    <p class="claim-footer">
+        Keep track of your recovery requests and check for updates.
+        Make sure your identifying details match the found item.
+    </p>
+    <a href="ownerRecoveryClaims.html">
+    <button type="button" id="claimbtn" onclick="">
+        View all claims
+    </button></a>
+
+</div>
+
+        
+
+ </div>
+
+
+</div>
+</div>
+ </div>
+</div>
+</main>
+</div>
+
+<div id="foot">
+    <p>2026 BackToYou. A little care bring things home</p>
+  </div>
+
+  
+
+
+ <script src="ownerLostReport.js"></script>
+</body>
